@@ -1,0 +1,28 @@
+.promo {
+  display: grid;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  background-color: $basic-green85;
+
+  @media (min-width: 768px) {
+    background-color: #ffffff;
+  }
+}
+
+.promo__title {
+  @include font(36px, 36px, #ffffff);
+
+  @media (min-width: 768px) {
+    @include font(60px, 60px);
+  }
+}
+
+.promo__slogan {
+  line-height: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    @include font(20px, 20px);
+  }
+}

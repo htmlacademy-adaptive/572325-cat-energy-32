@@ -1,0 +1,27 @@
+.usage__item {
+  background-color: $basic-grey;
+}
+
+.usage__item-title {
+  @include oswald-upper();
+  @include font(24px, 37px);
+}
+
+.usage__item-link {
+  @include oswald-upper();
+  @include font(16px, 16px);
+}
+
+@media (min-width: 768px) {
+  .usage__item-title {
+    @include font(36px, 36px);
+  }
+
+  .usage__item-text {
+    color: #000000;
+  }
+
+  .usage__item-link {
+    @include font(20px, 30px);
+  }
+}

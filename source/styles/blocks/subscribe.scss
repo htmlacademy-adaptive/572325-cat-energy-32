@@ -1,0 +1,29 @@
+.subscribe__title {
+  @include caption(24px, 24px);
+
+  @media (min-width: 768px) {
+    @include caption(32px, 32px);
+  }
+
+  @media (min-width: 1440px) {
+    @include caption(40px, 40px);
+  }
+}
+
+.subscribe__text {
+  text-align: center;
+
+  @include caption(16px, 24px);
+
+  @media (min-width: 768px) {
+    @include caption(24px, 32px);
+  }
+}
+
+.subscribe__input {
+  padding: 13px;
+  border: 1px solid $border-grey;
+
+  @include oswald-upper;
+  @include font(20px, 30px, $txt-color);
+}

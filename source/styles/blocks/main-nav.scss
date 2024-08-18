@@ -1,0 +1,14 @@
+.main-nav,
+.main-nav__list {
+  display: flex;
+  gap: 33px;
+}
+
+.main-nav__link {
+  @include font(20px, 20px);
+  @include oswald-upper();
+
+  @media (min-width: 768px) {
+    @include font(18px, 24px);
+  }
+}

@@ -1,0 +1,7 @@
+.page__title {
+  @include caption(36px, 36px);
+
+  @media (min-width: 768px) {
+    @include caption(60px, 60px);
+  }
+}

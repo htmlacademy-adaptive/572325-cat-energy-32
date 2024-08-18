@@ -1,0 +1,36 @@
+.product-card__name {
+  @include oswald-upper;
+}
+
+.product-card__name a,
+.product-card--more .product-card__name {
+  @include font(16px, 20px, $txt-name);
+
+  @media (min-width: 768px) {
+    @include font(20px, 24px, $txt-name);
+  }
+}
+
+.product-card__info-row {
+  display: flex;
+
+  @include font(12px, 16px, $txt-color);
+
+  @media (min-width: 768px) {
+    @include font(16px, 20px, $txt-color);
+  }
+}
+
+.product-card--more .product-card__name {
+  color: $dark-grey;
+}
+
+@media (min-width: 768px) {
+  .product-card:not(:last-child) {
+    background-color: $basic-grey;
+  }
+
+  .product-card--more .product-card__info-row {
+    line-height: 18px;
+  }
+}

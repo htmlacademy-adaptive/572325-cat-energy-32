@@ -1,0 +1,9 @@
+.giftbox {
+  display: grid;
+  text-align: center;
+  background-color: $basic-green85;
+}
+
+.giftbox__text {
+  @include font(16px, 20px, #ffffff);
+}

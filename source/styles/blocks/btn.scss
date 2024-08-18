@@ -1,0 +1,24 @@
+.btn {
+  @include oswald-upper();
+  @include font(16px, 20px, #ffffff);
+  background-color: $basic-green;
+  padding: 10px 30px;
+
+  &:not(.btn--product):not(.btn--more) {
+    @media (min-width: 768px) {
+      @include font(20px, 26px, #ffffff);
+    }
+  }
+}
+
+.btn--subscribe {
+  padding: 15px 30px;
+
+  @include font(20px, 26px, #ffffff);
+  border: none;
+}
+
+.btn--more {
+  background-color: $basic-grey;
+  color: $txt-color;
+}
