@@ -1,5 +1,32 @@
 .usage__item {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 24px 20px;
   background-color: $basic-grey;
+}
+
+.usage__item-decor {
+  width: 50px;
+  height: 50px;
+  background-color: $basic-green;
+  border-radius: 50%;
+}
+
+.usage__item-decor::before {
+  @include pseudoblock;
+  height: 100%;
+}
+
+.usage__item:nth-child(odd) .usage__item-decor::before {
+  margin-top: -6%;
+  background: url("../../icons/stack.svg#cat-usage1") no-repeat center;
+}
+
+.usage__item:nth-child(even) .usage__item-decor::before {
+  width: 134%;
+  background: url("../../icons/stack.svg#cat-usage2") no-repeat center;
+  margin-left: -16%;
 }
 
 .usage__item-title {
@@ -8,8 +35,40 @@
 }
 
 .usage__item-link {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.2s ease;
+
   @include oswald-upper();
   @include font(16px, 16px);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -13px;
+    border: 7px solid transparent;
+    border-left-color: #000000;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 26px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {

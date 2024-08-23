@@ -24,3 +24,8 @@
 
   @include font($font-size, $line-height);
 }
+
+@mixin pseudoblock {
+  content: "";
+  display: block;
+}

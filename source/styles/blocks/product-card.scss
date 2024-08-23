@@ -25,6 +25,10 @@
   color: $dark-grey;
 }
 
+.product-card__img-link img {
+  object-fit: scale-down;
+}
+
 @media (min-width: 768px) {
   .product-card:not(:last-child) {
     background-color: $basic-grey;

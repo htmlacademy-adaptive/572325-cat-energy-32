@@ -1,3 +1,16 @@
+.guide__item {
+  min-height: 60px;
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  padding-left: 80px;
+}
+
+@for $i from 1 to 5 {
+  .guide__item-#{$i} {
+    background-image: url(../../icons/stack.svg#guide#{$i});
+  }
+}
+
 .guide__title {
   @include caption(36px, 40px);
 }

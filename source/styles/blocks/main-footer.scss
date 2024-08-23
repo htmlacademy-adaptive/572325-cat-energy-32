@@ -25,5 +25,15 @@
 }
 
 .main-footer__copyright {
+  display: flex;
+  min-height: 34px;
+
   @include font(16px, 20px, $txt-color);
+}
+
+.main-footer__copyright::after {
+  @include pseudoblock;
+  width: 27px;
+  background-color: $decor-grey;
+  mask-image: url("../../icons/stack.svg#html-academy");
 }

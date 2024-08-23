@@ -6,4 +6,11 @@
 
 .giftbox__text {
   @include font(16px, 20px, #ffffff);
+
+  &::before {
+    @include pseudoblock;
+    width: 78px;
+    height: 80px;
+    background: url("../../icons/stack.svg#gift") no-repeat center;
+  }
 }

@@ -11,18 +11,19 @@
   <link rel="apple-touch-icon" href="favicons/apple-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
-  <style>
-    .product-card__img-link img {
-      object-fit: scale-down;
-    }
-  </style>
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img src="" width="33" height="38" alt="Логотип">
-      <img src="" width="101" height="20" alt="Cat Energy">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+        <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
+      </picture>
+      <picture>
+        <img src="images/logo-txt.svg" width="101" height="18" alt="Cat Energy">
+      </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle main-nav__toggle--closed" type="button">
@@ -317,7 +318,7 @@
     </section>
     <div class="main-footer__contacts">
       <a class="main-footer__logo-link" href="index.html">
-        <img class="main-footer__logo" src="" width="128" height="24" alt="Cat Energy">
+        <img class="main-footer__logo" src="images/logo-txt.svg" width="128" height="24" alt="Cat Energy">
       </a>
       <ul class="main-footer__social social">
         <li>
