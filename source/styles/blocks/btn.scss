@@ -5,7 +5,7 @@
   padding: 10px 30px;
 
   &:not(.btn--product):not(.btn--more) {
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
       @include font(20px, 26px, #ffffff);
     }
   }

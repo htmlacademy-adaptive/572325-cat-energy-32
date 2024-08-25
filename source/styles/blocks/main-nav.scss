@@ -1,14 +1,99 @@
-.main-nav,
 .main-nav__list {
-  display: flex;
-  gap: 33px;
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 33px;
+  }
 }
 
 .main-nav__link {
   @include font(20px, 20px);
   @include oswald-upper();
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(18px, 24px);
+  }
+
+  @media (min-width: $desktop) {
+    @include font(20px, 30px);
+  }
+}
+
+.main-nav__toggle {
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: #ffffff;
+  padding: 0;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.main-nav__toggle-line,
+.main-nav__toggle::before,
+.main-nav__toggle::after {
+  @include pseudoblock;
+  height: 2px;
+  background-color: #000000;
+  transition: all 0.3s ease;
+}
+
+.main-nav__toggle--open {
+  width: 25px;
+  height: 25px;
+  gap: 16px;
+
+  &::before {
+    transform: rotate(46deg);
+    transform-origin: left;
+  }
+
+  &::after {
+    transform: rotate(-47deg);
+    transform-origin: left;
+  }
+}
+
+.main-nav__toggle--open .main-nav__toggle-line {
+  display: none;
+}
+
+.main-nav__toggle--open + .main-nav__list {
+  display: grid;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
+  border-bottom: 1px solid $line-grey;
+}
+
+@media (max-width: $tablet) {
+  .main-nav__item {
+    border-top: 1px solid $line-grey;
+    padding: 22px 20px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .main-nav__item--current::after {
+    @include pseudoblock;
+    position: relative;
+    height: 2px;
+    background-color: $basic-green;
+    top: 10px;
+
+    @media (min-width: $desktop) {
+      background-color: #ffffff;
+      top: 8px;
+    }
   }
 }

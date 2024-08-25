@@ -1,8 +1,30 @@
 .main-header {
-  display: flex;
+  @include flex-between;
+  padding: 14px 20px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding: 25px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 55px 110px 10px;
+  }
+}
+
+.main-header--index {
+  @media (min-width: $desktop) {
+    position: absolute;
+    width: 100%;
+  }
 }
 
 .main-header__logo {
-  display: flex;
-  align-items: center;
+  @include flex-between;
+  width: calc(50% + 50px);
+
+  @media (min-width: $tablet) {
+    gap: 13px;
+    width: auto;
+  }
 }

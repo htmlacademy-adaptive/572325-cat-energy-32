@@ -6,7 +6,7 @@
 .product-card--more .product-card__name {
   @include font(16px, 20px, $txt-name);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(20px, 24px, $txt-name);
   }
 }
@@ -16,7 +16,7 @@
 
   @include font(12px, 16px, $txt-color);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(16px, 20px, $txt-color);
   }
 }
@@ -29,7 +29,7 @@
   object-fit: scale-down;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
   .product-card:not(:last-child) {
     background-color: $basic-grey;
   }

@@ -2,7 +2,7 @@
   @include oswald-upper;
   @include font(16px, 20px, $dark-grey);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(20px, 26px, $dark-grey);
   }
 }
@@ -11,7 +11,7 @@
   font-style: normal;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     font-size: 16px;
   }
 }
@@ -19,7 +19,7 @@
 .main-footer__contacts {
   background-color: $basic-grey;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     display: flex;
   }
 }

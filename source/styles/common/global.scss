@@ -4,22 +4,23 @@
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
 
   @include font(14px, 18px, $txt-color);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 a {

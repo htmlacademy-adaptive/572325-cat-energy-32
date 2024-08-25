@@ -1,11 +1,11 @@
 .other-product__title {
   @include caption(24px, 24px);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include caption(32px, 32px);
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop) {
     @include caption(40px, 40px);
   }
 }
@@ -14,7 +14,7 @@
   @include oswald-upper;
   @include font(16px, 16px, $txt-name);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(20px, 20px, $txt-name);
   }
 }

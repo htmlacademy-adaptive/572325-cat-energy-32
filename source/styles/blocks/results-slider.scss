@@ -6,6 +6,7 @@
 .results-slider__btn,
 .results__img-after {
   position: absolute;
+  top: 0;
 }
 
 .results-slider__btn {
@@ -56,6 +57,7 @@
   background-color: rgba(94, 170, 47, 0.6);
 }
 
+.results__img-before,
 .results__img-after {
   left: 0;
   right: 0;

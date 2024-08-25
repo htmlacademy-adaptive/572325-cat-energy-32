@@ -5,15 +5,20 @@
   color: #ffffff;
   background-color: $basic-green85;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop) {
+    background: linear-gradient(to right, #ffffff 50%, $basic-green85 50%);
+    padding-top: 145px;
   }
 }
 
 .promo__title {
   @include font(36px, 36px, #ffffff);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(60px, 60px);
   }
 }
@@ -22,7 +27,7 @@
   line-height: 14px;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(20px, 20px);
   }
 }

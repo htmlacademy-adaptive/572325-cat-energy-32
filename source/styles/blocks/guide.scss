@@ -15,7 +15,7 @@
   @include caption(36px, 40px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
   .guide__title {
     @include caption(60px, 60px);
   }

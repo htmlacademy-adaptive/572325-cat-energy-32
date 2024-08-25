@@ -5,7 +5,7 @@
 .results__title {
   @include caption(36px, 40px);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include caption(60px, 60px);
   }
 }
@@ -13,7 +13,7 @@
 .results__name {
   @include font(12px, 12px, $txt-color);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(14px, 14px, $txt-color);
   }
 }
@@ -22,7 +22,7 @@
   @include oswald-upper;
   @include font(24px, 24px);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(30px, 37px);
   }
 }
@@ -33,7 +33,7 @@
   @include oswald-upper;
   @include font(14px, 20px);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font(20px, 20px);
   }
 }
