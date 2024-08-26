@@ -17,6 +17,10 @@
 
   @media (min-width: $desktop) {
     @include font(20px, 30px);
+
+    .main-nav--index & {
+      color: #ffffff;
+    }
   }
 }
 
@@ -89,11 +93,12 @@
     position: relative;
     height: 2px;
     background-color: $basic-green;
-    top: 10px;
+    top: 8px;
 
-    @media (min-width: $desktop) {
-      background-color: #ffffff;
-      top: 8px;
+    .main-nav--index & {
+      @media (min-width: $desktop) {
+        background-color: #ffffff;
+      }
     }
   }
 }
