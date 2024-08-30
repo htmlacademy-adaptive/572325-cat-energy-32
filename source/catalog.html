@@ -14,7 +14,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header block-wrapper">
     <a class="main-header__logo" href="index.html">
       <picture>
         <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
@@ -34,8 +34,8 @@
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
-        <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link" aria-current="page">Каталог продукции</a>
+        <li class="main-nav__item main-nav__item--current"><!-- linthtml-disable -->
+          <a class="main-nav__link" aria-current="page">Каталог продукции</a><!-- linthtml-enable -->
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">Подбор программы</a>
@@ -44,7 +44,7 @@
     </nav>
   </header>
 
-  <main class="main-container">
+  <main class="main-container block-wrapper">
     <h1 class="page__title">Каталог продукции</h1>
     <section class="main-product">
       <h2 class="visually-hidden">Основная продукция</h2>
@@ -296,8 +296,8 @@
       <h2 class="subscribe__title">Акции и новинки</h2>
       <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
       <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="visually-hidden" for="subscribeInput">Введите Email</label>
-        <input class="subscribe__input" id="subscribeInput" type="email" name="email" placeholder="кuklachev@gmail.com" required>
+        <label class="visually-hidden" for="subscribe">Введите Email</label>
+        <input class="subscribe__input" id="subscribe" type="email" name="email" placeholder="кuklachev@gmail.com" required>
         <button class="subscribe__btn btn btn--subscribe" type="submit">Подписаться</button>
       </form>
     </section>
@@ -315,7 +315,7 @@
         </picture>
       </div>
     </section>
-    <div class="main-footer__contacts">
+    <div class="main-footer__contacts block-wrapper">
       <a class="main-footer__logo-link" href="index.html">
         <img class="main-footer__logo" src="images/logo-txt.svg" width="128" height="24" alt="Cat Energy">
       </a>

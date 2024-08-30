@@ -14,7 +14,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--index">
+  <header class="main-header main-header--index block-wrapper"><!-- linthtml-disable -->
     <a class="main-header__logo" aria-current="page">
       <picture>
         <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
@@ -24,15 +24,15 @@
       <picture>
         <img src="images/logo-txt.svg" width="101" height="18" alt="Cat Energy">
       </picture>
-    </a>
+    </a><!-- linthtml-enable -->
     <nav class="main-nav main-nav--index">
       <button class="main-nav__toggle main-nav__toggle--open" type="button" onclick="this.classList.toggle('main-nav__toggle--open')">
         <div class="main-nav__toggle-line"></div>
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link" aria-current="page">Главная</a>
+        <li class="main-nav__item main-nav__item--current"><!-- linthtml-disable -->
+          <a class="main-nav__link" aria-current="page">Главная</a><!-- linthtml-enable -->
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -45,7 +45,7 @@
   </header>
 
   <main class="main-container">
-    <section class="promo">
+    <section class="promo block-wrapper">
       <h1 class="promo__title">Функциональное<br>питание для котов</h1>
       <p class="promo__slogan">Занялся собой? Займись котом!</p>
       <picture>
@@ -55,7 +55,7 @@
       </picture>
       <a class="promo__link btn" href="#">подобрать программу</a>
     </section>
-    <section class="usage">
+    <section class="usage block-wrapper">
       <h2 class="visually-hidden">Поводы для употребления</h2>
       <ul class="usage__list">
         <li class="usage__item">
@@ -72,7 +72,7 @@
         </li>
       </ul>
     </section>
-    <section class="guide">
+    <section class="guide block-wrapper">
       <h2 class="guide__title">Как это работает</h2>
       <ol class="guide__list">
         <li class="guide__item guide__item-1">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -81,7 +81,7 @@
         <li class="guide__item guide__item-4">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
       </ol>
     </section>
-    <article class="results">
+    <article class="results block-wrapper">
       <h2 class="visually-hidden">Результаты употребления Cat Energy</h2>
       <h3 class="results__title">Живой пример</h3>
       <p class="results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
@@ -127,7 +127,7 @@
         </picture>
       </div>
     </section>
-    <div class="main-footer__contacts">
+    <div class="main-footer__contacts block-wrapper">
       <img class="main-footer__logo" src="images/logo-txt.svg" width="128" height="24" alt="Cat Energy">
       <ul class="main-footer__social social">
         <li>
