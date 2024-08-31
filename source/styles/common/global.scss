@@ -46,6 +46,18 @@ ol {
   list-style: none;
 }
 
+.block-wrapper {
+  padding-inline: 20px;
+
+  @media (min-width: $tablet) {
+    padding-inline: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-inline: 110px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

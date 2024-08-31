@@ -1,8 +1,9 @@
 .usage__item {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
   position: relative;
-  padding: 24px 20px;
+  padding: 24px 20px 18px;
   background-color: $basic-grey;
 }
 
@@ -32,21 +33,33 @@
 .usage__item-title {
   @include oswald-upper();
   @include font(24px, 37px);
+  grid-column: 2;
+  margin-left: 20px;
+}
+
+.usage__item-text,
+.usage__item-link {
+  grid-column: 1 / span 2;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    grid-column: 1;
+  }
 }
 
 .usage__item-link {
   display: flex;
   position: relative;
   align-items: center;
+  width: fit-content;
   gap: 15px;
   transition: all 0.2s ease;
+  margin-top: 15px;
 
   @include oswald-upper();
-  @include font(16px, 16px);
+  @include font(16px, 1);
 
   &::before {
     content: "";
-    display: block;
     position: absolute;
     right: -13px;
     border: 7px solid transparent;
@@ -55,7 +68,6 @@
 
   &::after {
     content: "";
-    display: block;
     width: 18px;
     height: 2px;
     background-color: #000000;
@@ -71,9 +83,53 @@
   }
 }
 
-@media (min-width: $tablet) {
+@media (max-width: $tablet) {
+  .usage__item {
+    margin-bottom: 20px;
+  }
+
+  .usage__item-text {
+    padding-block: 22px;
+    border-bottom: 1px solid $bottom-grey;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .usage__item {
+    grid-template-columns: 1fr auto;
+    column-gap: 53px;
+    margin-bottom: 30px;
+  }
+
+  .usage__item-decor {
+    grid-area: 1 / 2 / span 3;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 23px;
+  }
+
   .usage__item-title {
-    @include font(36px, 36px);
+    grid-column: 1;
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  .usage__item-link {
+    margin-top: 52px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .usage {
+    margin-bottom: 45px;
+  }
+
+  .usage__item {
+    padding: 77px 63px 57px 52px;
+  }
+
+  .usage__item-title {
+    @include font(36px, 1);
   }
 
   .usage__item-text {
@@ -81,6 +137,43 @@
   }
 
   .usage__item-link {
-    @include font(20px, 30px);
+    @include font(20px, 1.5);
+    gap: 25px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .usage {
+    margin-top: 82px;
+    margin-bottom: 71px;
+  }
+
+  .usage__list {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  .usage__item {
+    width: calc(50% - 40px);
+    padding-top: 47px;
+    padding-bottom: 59px;
+  }
+
+  .usage__item-title {
+    margin-left: 62px;
+  }
+
+  .usage__item-decor {
+    width: 100px;
+    height: 100px;
+  }
+
+  .usage__item-text {
+    margin-top: 39px;
+  }
+
+  .usage__item-link {
+    margin-top: 27px;
   }
 }
