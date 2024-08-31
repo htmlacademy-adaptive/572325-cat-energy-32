@@ -1,8 +1,13 @@
+.guide {
+  margin-bottom: 49px;
+}
+
 .guide__item {
   min-height: 60px;
   background-size: 60px 60px;
   background-repeat: no-repeat;
   padding-left: 80px;
+  margin-top: 20px;
 }
 
 @for $i from 1 to 5 {
@@ -13,14 +18,60 @@
 
 .guide__title {
   @include caption(36px, 40px);
+  margin-bottom: 40px;
 }
 
 @media (min-width: $tablet) {
+  .guide {
+    margin-bottom: 92px;
+  }
+
   .guide__title {
-    @include caption(60px, 60px);
+    @include caption(60px, 1);
+    margin-bottom: 12px;
   }
 
   .guide__list {
-    display: flex;
+    @include flex-between;
+    flex-wrap: wrap;
+    row-gap: 17px;
+    counter-reset: ol 0;
+  }
+
+  .guide__item {
+    position: relative;
+    min-height: 280px;
+    width: 250px;
+    padding: 150px 0 0;
+    background-size: 80px 80px;
+    background-position: left 40px;
+    margin-right: 75px;
+
+    &::after {
+      counter-increment: ol 1;
+      content: counter(ol);
+      font-family: "Oswald", sans-serif;
+      position: absolute;
+      top: 0;
+      left: 48%;
+      z-index: -1;
+
+      @include font(280px, 1, $basic-grey);
+    }
+  }
+}
+
+
+@media (min-width: $desktop) {
+  .guide {
+    margin-bottom: 69px;
+  }
+
+  .guide__item {
+    width: 248px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

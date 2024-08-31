@@ -120,6 +120,10 @@
 }
 
 @media (min-width: $tablet) {
+  .usage {
+    margin-bottom: 45px;
+  }
+
   .usage__item {
     padding: 77px 63px 57px 52px;
   }
