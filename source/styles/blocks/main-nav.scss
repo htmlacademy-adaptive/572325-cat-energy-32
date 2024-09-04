@@ -46,7 +46,10 @@
   cursor: pointer;
 
   @media (min-width: $tablet) {
-    display: none;
+    &,
+    .main-nav__toggle--open {
+      display: none;
+    }
   }
 }
 
@@ -79,18 +82,19 @@
   display: none;
 }
 
-.main-nav__toggle--open + .main-nav__list {
-  display: grid;
-  text-align: center;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  width: 100%;
-  border-bottom: 1px solid $line-grey;
-}
-
 @media (max-width: $tablet) {
+  .main-nav__toggle--open + .main-nav__list,
+  .no-js {
+    display: grid;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    border-bottom: 1px solid $line-grey;
+  }
+
   .main-nav__item {
     border-top: 1px solid $line-grey;
     padding: 22px 20px;

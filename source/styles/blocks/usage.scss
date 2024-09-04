@@ -41,7 +41,7 @@
 .usage__item-link {
   grid-column: 1 / span 2;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
     grid-column: 1;
   }
 }
@@ -94,7 +94,7 @@
   }
 }
 
-@media (min-width: $tablet) and (max-width: $desktop) {
+@media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
   .usage__item {
     grid-template-columns: 1fr auto;
     column-gap: 53px;

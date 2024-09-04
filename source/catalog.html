@@ -14,7 +14,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header block-wrapper">
+  <header class="main-header container">
     <a class="main-header__logo" href="index.html">
       <picture>
         <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
@@ -26,11 +26,7 @@
       </picture>
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle main-nav__toggle--open" type="button" onclick="this.classList.toggle('main-nav__toggle--open')">
-        <div class="main-nav__toggle-line"></div>
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="main-nav__list">
+      <ul class="main-nav__list no-js">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
@@ -44,7 +40,7 @@
     </nav>
   </header>
 
-  <main class="main-container block-wrapper">
+  <main class="main-container container">
     <h1 class="page__title">Каталог продукции</h1>
     <section class="main-product">
       <h2 class="visually-hidden">Основная продукция</h2>
@@ -315,7 +311,7 @@
         </picture>
       </div>
     </section>
-    <div class="main-footer__contacts block-wrapper">
+    <div class="main-footer__contacts container">
       <a class="main-footer__logo-link" href="index.html">
         <img class="main-footer__logo" src="images/logo-txt.svg" width="128" height="24" alt="Cat Energy">
       </a>

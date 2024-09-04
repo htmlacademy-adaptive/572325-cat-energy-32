@@ -12,7 +12,7 @@ body {
 
   @media (min-width: $tablet) {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
   }
 }
 
@@ -35,7 +35,9 @@ h3 {
   margin: 0;
 }
 
-p {
+p,
+dl,
+dd {
   margin: 0;
 }
 
@@ -46,7 +48,7 @@ ol {
   list-style: none;
 }
 
-.block-wrapper {
+.container {
   padding-inline: 20px;
 
   @media (min-width: $tablet) {
@@ -55,6 +57,8 @@ ol {
 
   @media (min-width: $desktop) {
     padding-inline: 110px;
+    max-width: $desktop;
+    margin: 0 auto;
   }
 }
 
