@@ -41,7 +41,7 @@
 .usage__item-link {
   grid-column: 1 / span 2;
 
-  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+  @media (min-width: $tablet) and (width < $desktop) {
     grid-column: 1;
   }
 }
@@ -71,7 +71,7 @@
     width: 18px;
     height: 2px;
     background-color: #000000;
-    transition: all 0.3s ease;
+    transition: width 0.3s, opacity 0.3s;
   }
 
   &:hover::after {
@@ -94,7 +94,7 @@
   }
 }
 
-@media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+@media (min-width: $tablet) and (width < $desktop) {
   .usage__item {
     grid-template-columns: 1fr auto;
     column-gap: 53px;

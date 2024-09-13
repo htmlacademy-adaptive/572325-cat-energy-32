@@ -2,14 +2,14 @@
   background-repeat: no-repeat;
 
   @media (max-width: $tablet) {
-    background-image: linear-gradient($basic-green85 302px, #ffffff 50%), linear-gradient(to right, #444444 calc(50% - 160px), transparent 30% 70%, #444444 calc(50% + 160px)), url("../../images/promo-bg-mobile@1x.jpg");
+    background-image: linear-gradient($basic-green85 302px, #ffffff 50%), linear-gradient(to right, #444444 calc(50% - 160px), transparent 30% 70%, #444444 calc(50% + 160px)), $promo-bg-mobile;
     background-position: top center;
     margin-bottom: 20px;
   }
 
   @media (min-width: $desktop) {
     background-color: #4e4e52;
-    background-image: linear-gradient(to right, #ffffff 50%, $basic-green85 50%), url("../../images/promo-bg-desktop@1x.jpg"), linear-gradient(to right, transparent 80%, #404040);
+    background-image: linear-gradient(to right, #ffffff 50%, $basic-green85 50%), $promo-bg-desktop, linear-gradient(to right, transparent 80%, #404040);
     background-position: center, calc(80% + 410px) top;
   }
 }
@@ -69,7 +69,7 @@
 }
 
 .promo__img {
-  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+  @media (min-width: $tablet) and (width < $desktop) {
     margin-top: -83px;
   }
 }

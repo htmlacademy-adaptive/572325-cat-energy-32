@@ -1,11 +1,28 @@
+.page {
+  height: 100%;
+}
+
 .page__body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
+  min-height: 100%;
+}
+
+.page-content {
+  flex-grow: 1;
 }
 
 .page__title {
-  @include caption(36px, 36px);
+  @include caption(36px, 1);
+  margin-block: 27px 40px;
 
   @media (min-width: $tablet) {
-    @include caption(60px, 60px);
+    @include caption(60px, 1);
+    margin-top: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 20px;
   }
 }

@@ -19,7 +19,6 @@
 .main-header--index {
   @media (min-width: $desktop) {
     position: absolute;
-    width: 100%;
     left: 0;
     right: 0;
   }
@@ -32,5 +31,12 @@
   @media (min-width: $tablet) {
     gap: 13px;
     width: auto;
+  }
+}
+
+.main-header__logo-txt {
+  @media (min-width: $desktop) {
+    width: 118px;
+    height: 21px;
   }
 }

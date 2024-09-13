@@ -1,6 +1,19 @@
 .social {
   display: flex;
   gap: 24px;
+  justify-content: center;
+  padding-block: 20px;
+  width: 280px;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet) {
+    border-block: 1px solid $bottom-grey;
+  }
+}
+
+.social__item {
+  display: flex;
+  align-items: center;
 }
 
 .social__link {

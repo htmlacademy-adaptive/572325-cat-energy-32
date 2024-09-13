@@ -59,10 +59,11 @@
   display: grid;
   place-items: center;
   text-align: center;
-  border: 1px solid $border-grey;
+  border: $border;
   border-radius: 3px;
   min-width: 124px;
   min-height: 56px;
+  padding: 15px;
   margin-bottom: 34px;
 
   @media (min-width: $tablet) {
@@ -127,7 +128,7 @@
 }
 
 
-@media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+@media (min-width: $tablet) and (width < $desktop) {
   .results__stats {
     @include flex-between;
     gap: 10%;

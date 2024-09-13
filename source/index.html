@@ -6,6 +6,8 @@
   <title>CAT Energy - Главная</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-icon.png">
@@ -22,7 +24,7 @@
         <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
       </picture>
       <picture>
-        <img src="images/logo-txt.svg" width="101" height="18" alt="Cat Energy">
+        <img class="main-header__logo-txt" src="images/logo-txt.svg" width="101" height="18" alt="Cat Energy">
       </picture>
     </a><!-- linthtml-enable -->
     <nav class="main-nav main-nav--index">
@@ -40,12 +42,15 @@
     </nav>
   </header>
 
-  <main class="main-container">
+  <main class="page__content">
     <section class="promo">
       <div class="promo__wrapper container">
         <h1 class="promo__title">Функциональное<br>питание для котов</h1>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <picture>
+          <source width="552" height="499" type="image/webp" media="(min-width: 1440px)" srcset="images/webp/promo@1x.webp 1x, images/webp/promo@2x.webp 2x">
+          <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/webp/promo-tablet@1x.webp 1x, images/webp/promo-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="images/webp/promo-mobile@1x.webp 1x, images/webp/promo-mobile@2x.webp 2x">
           <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/promo@1x.png 1x, images/promo@2x.png 2x">
           <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/promo-tablet@1x.png 1x, images/promo-tablet@2x.png 2x">
           <img class="promo__img" src="images/promo-mobile@1x.png" srcset="images/promo-mobile@2x.png 2x" width="280" height="270" alt="Образец продукции Cat Energy со вкусом курицы">
@@ -102,15 +107,19 @@
         </div>
         <div class="results__slider results-slider">
           <picture>
+            <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/webp/before-tablet@1x.webp 1x, images/webp/before-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="images/webp/before-mobile@1x.webp 1x, images/webp/before-mobile@2x.webp 2x">
             <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/before-tablet@1x.png 1x, images/before-tablet@2x.png 2x">
-            <img class="results-slider__img-before" id="img1" src="images/before-mobile@1x.png" srcset="images/before-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис с лишним весом">
+            <img class="results-slider__img-before" src="images/before-mobile@1x.png" srcset="images/before-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис с лишним весом">
           </picture>
-          <button class="results-slider__btn" id="comparebtn" type="button">
+          <button class="results-slider__btn" type="button">
             <span class="visually-hidden">Оцените разницу</span>
           </button>
           <picture>
+            <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/webp/after-tablet@1x.webp 1x, images/webp/after-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="images/webp/after-mobile@1x.webp 1x, images/webp/after-mobile@2x.webp 2x">
             <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/after-tablet@1x.png 1x, images/after-tablet@2x.png 2x">
-            <img class="results-slider__img-after" id="img2" src="images/after-mobile@1x.png" srcset="images/after-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис после диетпитания от Cat Energy">
+            <img class="results-slider__img-after" src="images/after-mobile@1x.png" srcset="images/after-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис после диетпитания от Cat Energy">
           </picture>
         </div>
       </div>
@@ -121,42 +130,43 @@
     <section class="main-footer__where">
       <div class="main-footer__invitation">
         <h2 class="main-footer__title">Приглашаем<br>к сотрудничеству дилеров!</h2>
-        <address class="main-footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        <picture>
-          <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/map@1x.png 1x, images/map@2x.png 2x">
-          <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
-          <img class="main-footer__map" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Наше местонахождение на карте">
-        </picture>
+        <address class="main-footer__address">ул. Большая Конюшенная, д.&nbsp;19/8 <p>Санкт-Петербург</p>
+        </address>
+      </div>
+      <picture>
+        <source width="1440" height="400" type="image/webp" media="(min-width: 1440px)" srcset="images/webp/map@1x.webp 1x, images/webp/map@2x.webp 2x">
+        <source width="768" height="400" type="image/webp" media="(min-width: 768px)" srcset="images/webp/map-tablet@1x.webp 1x, images/webp/map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="images/webp/map-mobile@1x.webp 1x, images/webp/map-mobile@2x.webp 2x">
+        <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/map@1x.png 1x, images/map@2x.png 2x">
+        <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
+        <img class="main-footer__map" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Наше местонахождение на карте">
+      </picture>
+    </section>
+    <section class="main-footer__contacts">
+      <h2 class="visually-hidden">Наши контакты в интернете</h2>
+      <div class="main-footer__contacts-wrapper container">
+        <img class="main-footer__logo" src="images/logo-txt.svg" width="128" height="24" alt="Логотип Cat Energy">
+        <ul class="main-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">
+              <span class="visually-hidden">Мы в ВКонтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--yt" href="#">
+              <span class="visually-hidden">Мы в Youtube</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--tg" href="#">
+              <span class="visually-hidden">Мы в Telegram</span>
+            </a>
+          </li>
+        </ul>
+        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </section>
-    <div class="main-footer__contacts container">
-      <img class="main-footer__logo" src="images/logo-txt.svg" width="128" height="24" alt="Cat Energy">
-      <ul class="main-footer__social social">
-        <li>
-          <a class="social__link social__link--vk" href="#">
-            <span class="visually-hidden">Мы в ВКонтакте</span>
-          </a>
-        </li>
-        <li>
-          <a class="social__link social__link--yt" href="#">
-            <span class="visually-hidden">Мы в Youtube</span>
-          </a>
-        </li>
-        <li>
-          <a class="social__link social__link--tg" href="#">
-            <span class="visually-hidden">Мы в Telegram</span>
-          </a>
-        </li>
-      </ul>
-      <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-    </div>
   </footer>
-  <script>
-    /* const guideItems = document.querySelectorAll('.guide__item');
-    for (var i = 0; i < guideItems.length; i++) {
-      guideItems[i].style.backgroundImage = 'url("../../icons/stack.svg#guide' + (i + 1) + '")';
-    } */
-  </script>
 </body>
 
 </html>

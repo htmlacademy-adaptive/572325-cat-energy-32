@@ -1,0 +1,40 @@
+.top-line {
+  position: relative;
+
+  &::before {
+    @include pseudoblock;
+    position: absolute;
+    height: 2px;
+    top: 12px;
+    width: 100%;
+    background-color: $basic-green;
+    z-index: -1;
+
+    @media (min-width: $tablet) {
+      top: 16px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 20px;
+    }
+  }
+}
+
+.top-line__title {
+  @include caption(24px, 1);
+  background-color: #ffffff;
+  padding-right: 40px;
+  margin-left: 20px;
+  width: fit-content;
+  box-shadow: -40px 0 #ffffff;
+
+  @media (min-width: $tablet) {
+    @include caption(32px, 1);
+    margin-left: 70px;
+  }
+
+  @media (min-width: $desktop) {
+    @include caption(40px, 1);
+    margin-left: calc(50% - 610px);
+  }
+}
