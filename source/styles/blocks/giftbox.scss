@@ -26,9 +26,12 @@
   padding: 59px 60px 43px;
 
   @media (min-width: calc($tablet * 0.75)) and (width < $desktop) {
-    @include flex-between;
+    grid-template-columns: 80px 210px;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
     padding: 57px 77px 55px;
+    text-align: left;
   }
 
   @media (min-width: $desktop) {

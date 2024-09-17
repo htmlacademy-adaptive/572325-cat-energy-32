@@ -2,12 +2,16 @@
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding-block: 20px;
+  padding-block: 19px;
   width: 280px;
   flex-wrap: wrap;
 
-  @media (max-width: $tablet) {
+  @media (width < $tablet) {
     border-block: 1px solid $bottom-grey;
+  }
+
+  @media (min-width: 768px) {
+    margin-left: 35px;
   }
 }
 
@@ -20,6 +24,15 @@
   width: 28px;
   height: 22px;
   background-color: $decor-grey;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social__link--vk {
@@ -33,4 +46,3 @@
 .social__link--tg {
   mask-image: url("../../icons/stack.svg#telegram");
 }
-

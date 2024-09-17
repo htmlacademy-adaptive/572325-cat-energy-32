@@ -15,11 +15,11 @@
 
 .page__title {
   @include caption(36px, 1);
-  margin-block: 27px 40px;
+  margin-block: 28px 41px;
 
   @media (min-width: $tablet) {
     @include caption(60px, 1);
-    margin-top: 35px;
+    margin-top: 40px;
   }
 
   @media (min-width: $desktop) {

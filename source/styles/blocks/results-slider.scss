@@ -21,32 +21,36 @@
   cursor: col-resize;
   border-radius: 2px;
 
+  &::before,
+  &::after {
+    @include pseudoblock;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -18px;
+    bottom: 50%;
+    transform: translateY(50%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    background-color: #ffffff;
+    border: 1px solid $decor-grey;
+  }
+
+  &::after {
+    background-color: $decor-grey;
+    mask-image: url("../../icons/stack.svg#slider-btn");
+    mask-size: 40px 40px;
+  }
+
   &:active::before {
     border: none;
   }
 }
 
-.results-slider__btn::before,
-.results-slider__btn::after {
-  @include pseudoblock;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: -18px;
-  bottom: 50%;
-  transform: translateY(50%);
-  border-radius: 50%;
-}
-
-.results-slider__btn::before {
-  background-color: #ffffff;
-  border: 1px solid $decor-grey;
-}
-
-.results-slider__btn::after {
-  background-color: $decor-grey;
-  mask-image: url("../../icons/stack.svg#slider-btn");
-  mask-size: 40px 40px;
+.results-slider__btn:hover::before {
+  border-color: $basic-green;
 }
 
 .results-slider__btn:hover,

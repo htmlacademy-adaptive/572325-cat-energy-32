@@ -39,9 +39,8 @@
 }
 
 .results__list {
-  display: flex;
+  @include flex-between;
   gap: 10%;
-  justify-content: center;
   flex-wrap: wrap;
 
   @media (min-width: $tablet) {
@@ -50,7 +49,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
 }
 
@@ -115,7 +114,7 @@
 
   @media (min-width: $desktop) {
     justify-content: start;
-    gap: 63px;
+    gap: 65px;
   }
 }
 
@@ -132,7 +131,7 @@
   .results__stats {
     @include flex-between;
     gap: 10%;
-    margin-bottom: 100px;
+    margin-bottom: 104px;
   }
 
   .results__list {

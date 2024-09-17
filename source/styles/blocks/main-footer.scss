@@ -4,10 +4,16 @@
 
 .main-footer__where {
   position: relative;
+  width: 100vw;
 
   & iframe {
     display: block;
     border: none;
+    height: 362px;
+
+    @media (min-width: $tablet) {
+      height: 400px;
+    }
   }
 }
 
@@ -27,17 +33,17 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 61px 70px;
+    padding: 61px 65px;
     gap: 40%;
   }
 
   @media (min-width: $desktop) {
     position: absolute;
     top: 95px;
-    right: 53%;
+    right: calc(50% + 45px);
     width: 565px;
     background-color: #ffffff;
-    padding-inline: 80px;
+    padding-inline: 78px 52px;
     gap: 15%;
     z-index: 1;
   }
@@ -84,25 +90,50 @@
     padding-block: 43px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     padding-block: 54px;
+  }
+}
+
+.main-footer__logo-link {
+  width: 128px;
+  height: 24px;
+  background-color: $dark-grey;
+  mask: url("../../images/logo-txt.svg") no-repeat center;
+  mask-size: 100%;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #3e3e3e;
+  }
+
+  &:active {
+    background-color: #6b6b6b;
   }
 }
 
 .main-footer__copyright {
   @include flex-between;
+  @include font(16px, 1.25, $txt-color);
   min-height: 34px;
   justify-self: stretch;
 
-  @include font(16px, 1.25, $txt-color);
-}
+  &::after {
+    @include pseudoblock;
+    flex-shrink: 0;
+    width: 27px;
+    height: 34px;
+    margin-left: 23px;
+    background-color: $decor-grey;
+    mask-image: url("../../icons/stack.svg#html-academy");
+  }
 
-.main-footer__copyright::after {
-  @include pseudoblock;
-  flex-shrink: 0;
-  width: 27px;
-  height: 34px;
-  margin-left: 23px;
-  background-color: $decor-grey;
-  mask-image: url("../../icons/stack.svg#html-academy");
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

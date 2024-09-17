@@ -5,17 +5,17 @@
     @include pseudoblock;
     position: absolute;
     height: 2px;
-    top: 12px;
+    top: 10px;
     width: 100%;
     background-color: $basic-green;
     z-index: -1;
 
     @media (min-width: $tablet) {
-      top: 16px;
+      top: 14px;
     }
 
     @media (min-width: $desktop) {
-      top: 20px;
+      top: 18px;
     }
   }
 }
@@ -35,6 +35,6 @@
 
   @media (min-width: $desktop) {
     @include caption(40px, 1);
-    margin-left: calc(50% - 610px);
+    margin-left: calc(50vw - 610px);
   }
 }

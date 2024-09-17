@@ -1,14 +1,23 @@
 .btn {
   @include oswald-upper();
-  @include font(16px, 20px, #ffffff);
+  @include font(16px, 1.25, #ffffff);
   background-color: $basic-green;
   padding: 10px 30px;
   text-align: center;
 
   &:not(.btn--product):not(.btn--more) {
     @media (min-width: $tablet) {
-      @include font(20px, 26px, #ffffff);
+      font-size: 20;
+      line-height: 26px;
     }
+  }
+
+  &:hover {
+    background-color: $active-green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -17,9 +26,22 @@
 
   @include font(20px, 26px, #ffffff);
   border: none;
+
+  &:disabled {
+    background-color: $basic-grey;
+    cursor: not-allowed;
+  }
 }
 
 .btn--more {
   background-color: $basic-grey;
   color: $txt-color;
+
+  &:hover {
+    background-color: $prod-border;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
