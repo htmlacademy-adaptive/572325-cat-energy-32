@@ -1,1 +1,75 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+
+  @include font(14px, 18px, $txt-color);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  margin: 0;
+}
+
+p,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  padding-inline: 20px;
+
+  @media (min-width: $tablet) {
+    padding-inline: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-inline: 110px;
+    width: $desktop;
+    margin: 0 auto;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

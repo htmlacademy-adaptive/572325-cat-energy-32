@@ -1,0 +1,56 @@
+.giftbox {
+  flex-grow: 1;
+  background-image: $gift-bg-mobile;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: calc($tablet * 0.75)) and (width < $desktop) {
+    background-image: $gift-bg-tablet;
+    min-height: 200px;
+    width: 100%;
+    max-width: 707px;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: $gift-bg-desktop;
+  }
+}
+
+.giftbox__text {
+  @include font(16px, 1.25, #ffffff);
+  display: grid;
+  gap: 48px;
+  text-align: center;
+  height: 100%;
+  background-color: $basic-green85;
+  padding: 59px 60px 43px;
+
+  @media (min-width: calc($tablet * 0.75)) and (width < $desktop) {
+    grid-template-columns: 80px 210px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 57px 77px 55px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 56px 40px 43px;
+    gap: 10px;
+    align-content: space-between;
+  }
+
+  &::before {
+    @include pseudoblock;
+    place-self: start;
+    justify-self: center;
+    width: 78px;
+    height: 80px;
+    background: url("../../icons/stack.svg#gift") no-repeat center;
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 83px;
+    }
+  }
+}

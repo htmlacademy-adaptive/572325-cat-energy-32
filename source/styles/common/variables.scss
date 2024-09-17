@@ -1,1 +1,53 @@
-/* здесь используйте глобальные переменные */
+$txt-color: #444444;
+$txt-name: #222222;
+$basic-grey: #f2f2f2;
+$special-grey: #eaeaea;
+$dark-grey: #111111;
+$basic-green: #68b738;
+$basic-green85: rgba(104, 183, 56, 0.85);
+$active-green: #5eaa2f;
+$border-grey: #cdcdcd;
+$decor-grey: #666666;
+$line-grey: #e6e6e6;
+$bottom-grey: #d9d9d9;
+$prod-border: #ebebeb;
+$plus-grey: #d3d3d3;
+$border: 1px solid $border-grey;
+
+$tablet: 768px;
+$desktop: 1440px;
+
+$promo-bg-mobile: image-set(
+  url("../../images/webp/promo-bg-mobile@1x.webp") type("image/webp") 1x,
+  url("../../images/webp/promo-bg-mobile@2x.webp") type("image/webp") 2x,
+  url("../../images/promo-bg-mobile@1x.jpg") type("image/jpg") 1x,
+  url("../../images/promo-bg-mobile@2x.jpg") type("image/jpg") 2x
+);
+
+$promo-bg-desktop: image-set(
+  url("../../images/webp/promo-bg-desktop@1x.webp") type("image/webp") 1x,
+  url("../../images/webp/promo-bg-desktop@2x.webp") type("image/webp") 2x,
+  url("../../images/promo-bg-desktop@1x.jpg") type("image/jpg") 1x,
+  url("../../images/promo-bg-desktop@2x.jpg") type("image/jpg") 2x
+);
+
+$gift-bg-mobile: image-set(
+  url("../../images/webp/gift-bg-mobile@1x.webp") type("image/webp") 1x,
+  url("../../images/webp/gift-bg-mobile@2x.webp") type("image/webp") 2x,
+  url("../../images/gift-bg-mobile@1x.jpg") type("image/jpg") 1x,
+  url("../../images/gift-bg-mobile@2x.jpg") type("image/jpg") 2x
+);
+
+$gift-bg-tablet: image-set(
+  url("../../images/webp/gift-bg-tablet@1x.webp") type("image/webp") 1x,
+  url("../../images/webp/gift-bg-tablet@2x.webp") type("image/webp") 2x,
+  url("../../images/gift-bg-tablet@1x.jpg") type("image/jpg") 1x,
+  url("../../images/gift-bg-tablet@2x.jpg") type("image/jpg") 2x
+);
+
+$gift-bg-desktop: image-set(
+  url("../../images/webp/gift-bg-desktop@1x.webp") type("image/webp") 1x,
+  url("../../images/webp/gift-bg-desktop@2x.webp") type("image/webp") 2x,
+  url("../../images/gift-bg-desktop@1x.jpg") type("image/jpg") 1x,
+  url("../../images/gift-bg-desktop@2x.jpg") type("image/jpg") 2x
+);

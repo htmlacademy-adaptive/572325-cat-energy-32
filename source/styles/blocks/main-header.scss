@@ -1,0 +1,50 @@
+.main-header {
+  @include flex-between;
+  padding: 13px 20px;
+  position: relative;
+
+  @media (max-width: $tablet) {
+    border-bottom: 1px solid $bottom-grey;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 25px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 55px 110px;
+  }
+}
+
+.main-header--index {
+  @media (min-width: $desktop) {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.main-header__logo {
+  @include flex-between;
+  width: calc(50% + 50px);
+
+  @media (min-width: $tablet) {
+    gap: 13px;
+    width: auto;
+  }
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__logo-txt {
+  @media (min-width: $desktop) {
+    width: 118px;
+    height: 21px;
+  }
+}

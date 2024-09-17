@@ -1,0 +1,139 @@
+.main-footer__contacts {
+  background-color: $basic-grey;
+}
+
+.main-footer__where {
+  position: relative;
+  width: 100vw;
+
+  & iframe {
+    display: block;
+    border: none;
+    height: 362px;
+
+    @media (min-width: $tablet) {
+      height: 400px;
+    }
+  }
+}
+
+.main-footer__invitation {
+  display: flex;
+  padding: 26px 20px;
+  justify-content: space-evenly;
+
+  &--catalog {
+    background-color: $basic-grey;
+  }
+
+  & > * {
+    flex-basis: 140px;
+    flex-grow: 1;
+    max-width: 185px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 61px 65px;
+    gap: 40%;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 95px;
+    right: calc(50% + 45px);
+    width: 565px;
+    background-color: #ffffff;
+    padding-inline: 78px 52px;
+    gap: 15%;
+    z-index: 1;
+  }
+}
+
+.main-footer__title {
+  @include oswald-upper;
+  @include font(16px, 1.25, $dark-grey);
+
+  @media (min-width: $tablet) {
+    @include font(20px, 1.3, $dark-grey);
+  }
+}
+
+.main-footer__address {
+  font-style: normal;
+  line-height: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+
+    & p {
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: $tablet) and (width < $desktop) {
+    text-align: right;
+  }
+}
+
+.main-footer__map {
+  margin: 0 auto;
+}
+
+.main-footer__contacts-wrapper {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  padding-block: 40px;
+
+  @media (min-width: $tablet) {
+    @include flex-between;
+    padding-block: 43px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-block: 54px;
+  }
+}
+
+.main-footer__logo-link {
+  width: 128px;
+  height: 24px;
+  background-color: $dark-grey;
+  mask: url("../../images/logo-txt.svg") no-repeat center;
+  mask-size: 100%;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #3e3e3e;
+  }
+
+  &:active {
+    background-color: #6b6b6b;
+  }
+}
+
+.main-footer__copyright {
+  @include flex-between;
+  @include font(16px, 1.25, $txt-color);
+  min-height: 34px;
+  justify-self: stretch;
+
+  &::after {
+    @include pseudoblock;
+    flex-shrink: 0;
+    width: 27px;
+    height: 34px;
+    margin-left: 23px;
+    background-color: $decor-grey;
+    mask-image: url("../../icons/stack.svg#html-academy");
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

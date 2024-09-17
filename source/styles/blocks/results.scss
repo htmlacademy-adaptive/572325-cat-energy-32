@@ -1,0 +1,159 @@
+.results {
+  background-color: $special-grey;
+  padding-block: 25px 40px;
+
+  @media (min-width: $tablet) {
+    background-image: linear-gradient(to top, $special-grey 462px, #ffffff 0);
+    padding-block: 0 100px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 75px;
+  }
+}
+
+.results__title {
+  @include caption(36px, 40px);
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    @include caption(60px, 1);
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 146px;
+  }
+}
+
+.results__text {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 70px;
+  }
+}
+
+.results__list {
+  @include flex-between;
+  gap: 10%;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    gap: 42px;
+    justify-content: start;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.results__item {
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border: $border;
+  border-radius: 3px;
+  min-width: 124px;
+  min-height: 56px;
+  padding: 15px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    min-width: 162px;
+    min-height: 72px;
+    margin-bottom: 0;
+  }
+}
+
+.results__name {
+  position: absolute;
+  bottom: -17px;
+  width: 70%;
+  padding-inline: 8px;
+  background-color: $special-grey;
+
+  @include font(12px, 1, $txt-color);
+
+  @media (min-width: $tablet) {
+    @include font(14px, 1, $txt-color);
+    width: fit-content;
+    max-width: 142px;
+    bottom: -7px;
+  }
+}
+
+.results__value {
+  @include oswald-upper;
+  @include font(24px, 1);
+
+  @media (min-width: $tablet) {
+    @include font(30px, 37px);
+  }
+}
+
+.results__cost {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  @include oswald-upper;
+  @include font(14px, 20px);
+
+  @media (min-width: $tablet) {
+    @include font(20px, 1);
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    justify-content: start;
+    gap: 65px;
+  }
+}
+
+.results__slider {
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    grid-area: 1 / 2 / span 3;
+  }
+}
+
+
+@media (min-width: $tablet) and (width < $desktop) {
+  .results__stats {
+    @include flex-between;
+    gap: 10%;
+    margin-bottom: 104px;
+  }
+
+  .results__list {
+    flex: 1;
+  }
+
+  .results__name {
+    background-color: #ffffff;
+  }
+
+  .results__cost {
+    width: 25%;
+    flex-direction: column;
+    align-items: end;
+    gap: 9px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .results__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 560px;
+    column-gap: 225px;
+  }
+}

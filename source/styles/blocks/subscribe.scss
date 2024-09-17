@@ -1,0 +1,93 @@
+.subscribe__title {
+  @include caption(24px, 1);
+
+  @media (min-width: $tablet) {
+    @include caption(32px, 1);
+  }
+
+  @media (min-width: $desktop) {
+    @include caption(40px, 1);
+  }
+}
+
+.subscribe__wrapper {
+  text-align: center;
+  padding-block: 32px 40px;
+
+  @media (min-width: $tablet) {
+    padding-block: 66px 80px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-block: 72px 104px;
+  }
+}
+
+.subscribe__wrapper > * {
+  @media (min-width: $tablet) {
+    width: max(632px, 82%);
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: 752px;
+  }
+}
+
+.subscribe__text {
+  @include caption(16px, 1.5);
+  text-align: center;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    @include caption(24px, 32px);
+  }
+}
+
+.subscribe__form {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.subscribe__form > * {
+  @media (width < $tablet) {
+    min-width: max(280px, 85%);
+  }
+}
+
+.subscribe__input {
+  @include oswald-upper;
+  @include font(20px, 1.5, $txt-color);
+  padding: 13px;
+  outline: $border;
+  outline-offset: -1px;
+  border: none;
+
+  @media (width < $tablet) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $tablet) {
+    flex-grow: 1;
+  }
+
+  &:hover {
+    outline-color: #e7e7e7;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $txt-color;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    outline-color: #ff8282;
+  }
+}
+
+.subscribe__btn {
+  @media (min-width: $tablet) {
+    width: 256px;
+  }
+}

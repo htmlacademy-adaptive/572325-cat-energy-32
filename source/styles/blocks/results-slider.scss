@@ -1,0 +1,72 @@
+.results-slider {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.results-slider__btn,
+.results-slider__img-after {
+  position: absolute;
+  top: 0;
+}
+
+.results-slider__btn {
+  width: 4px;
+  height: 100%;
+  padding: 0;
+  left: calc(50% - 2px);
+  z-index: 1;
+  border: none;
+  background-color: $decor-grey;
+  cursor: col-resize;
+  border-radius: 2px;
+
+  &::before,
+  &::after {
+    @include pseudoblock;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -18px;
+    bottom: 50%;
+    transform: translateY(50%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    background-color: #ffffff;
+    border: 1px solid $decor-grey;
+  }
+
+  &::after {
+    background-color: $decor-grey;
+    mask-image: url("../../icons/stack.svg#slider-btn");
+    mask-size: 40px 40px;
+  }
+
+  &:active::before {
+    border: none;
+  }
+}
+
+.results-slider__btn:hover::before {
+  border-color: $basic-green;
+}
+
+.results-slider__btn:hover,
+.results-slider__btn:hover::after {
+  background-color: $basic-green;
+}
+
+.results-slider__btn:active,
+.results-slider__btn:active::after {
+  background-color: rgba(94, 170, 47, 0.6);
+}
+
+.results-slider__img-before {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.results-slider__img-after {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}

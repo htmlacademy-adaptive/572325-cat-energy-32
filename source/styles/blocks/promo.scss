@@ -1,0 +1,94 @@
+.promo {
+  background-repeat: no-repeat;
+
+  @media (width < $tablet) {
+    background-image: linear-gradient($basic-green85 302px, #ffffff 50%), linear-gradient(to right, #444444 calc(50% - 160px), transparent 30% 70%, #444444 calc(50% + 160px)), $promo-bg-mobile;
+    background-position: top center;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: #4e4e52;
+    background-image: linear-gradient(to right, #ffffff 50%, $basic-green85 50%), $promo-bg-desktop, linear-gradient(to right, transparent 80%, #404040);
+    background-position: center, calc(80% + 410px) top;
+  }
+}
+
+.promo__wrapper {
+  display: grid;
+  font-family: "Oswald", sans-serif;
+  padding-top: 27px;
+  text-align: center;
+  justify-items: center;
+  color: #ffffff;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+    padding-top: 40px;
+
+    & > *:not(picture) {
+      margin-inline: 90px;
+      justify-self: start;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-block: 145px 50px;
+    grid-template-columns: 50% 1fr;
+
+    & > *:not(picture) {
+      margin-inline: 80px;
+    }
+  }
+}
+
+.promo__title {
+  margin-bottom: 25px;
+
+  @include font(36px, 1, #ffffff);
+
+  @media (min-width: $tablet) {
+    @include font(60px, 1);
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 80px;
+  }
+}
+
+.promo__slogan {
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    @include font(20px, 1);
+    margin-bottom: 50px;
+  }
+}
+
+.promo__img {
+  @media (min-width: $tablet) and (width < $desktop) {
+    margin-top: -83px;
+  }
+}
+
+.promo__link {
+  @media (width < $tablet) {
+    width: 280px;
+    margin-top: 3px;
+  }
+
+  @media (min-width: $tablet) {
+    grid-row: 3;
+    padding: 14px 27px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .promo picture {
+    grid-area: 1 / 2 / span 4;
+    margin-left: -385px;
+  }
+}

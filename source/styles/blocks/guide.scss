@@ -1,0 +1,93 @@
+.guide {
+  margin-bottom: 48px;
+}
+
+.guide__title {
+  @include caption(36px, 40px);
+  margin-bottom: 40px;
+}
+
+.guide__item {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@for $i from 1 to 5 {
+  .guide__item-#{$i}::before {
+    background-image: url(../../icons/stack.svg#guide#{$i});
+  }
+}
+
+@media (min-width: $tablet) {
+  .guide {
+    margin-bottom: 92px;
+  }
+
+  .guide__title {
+    @include caption(60px, 1);
+    margin-bottom: 12px;
+  }
+
+  .guide__list {
+    @include flex-between;
+    flex-wrap: wrap;
+    row-gap: 17px;
+    counter-reset: ol 0;
+  }
+
+  .guide__item {
+    display: grid;
+    position: relative;
+    align-content: start;
+    gap: 31px;
+    min-height: 280px;
+    width: 250px;
+    padding: 40px 0 0;
+    margin-right: 75px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      background-size: 33%;
+    }
+
+    &::after {
+      counter-increment: ol 1;
+      content: counter(ol);
+      font-family: "Oswald", sans-serif;
+      position: absolute;
+      top: 0;
+      left: 45%;
+      z-index: -1;
+
+      @include font(280px, 1, $basic-grey);
+    }
+  }
+}
+
+
+@media (min-width: $desktop) {
+  .guide {
+    margin-bottom: 69px;
+  }
+
+  .guide__item {
+    width: 245px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
