@@ -41,7 +41,8 @@
   }
 
   .guide__list {
-    @include flex-between;
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 17px;
     counter-reset: ol 0;

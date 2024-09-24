@@ -1,6 +1,7 @@
-const nav = document.querySelector('.main-nav__list');
-nav.insertAdjacentHTML('beforeBegin', '<button class="main-nav__toggle" type="button" onclick="this.classList.toggle(\'main-nav__toggle--open\')"><div class="main-nav__toggle-line"></div><span class="visually-hidden">Открыть меню</span></button>');
-nav.classList.remove('no-js');
+const navBtn = document.querySelector('.main-nav__toggle');
+const navList = document.querySelector('.main-nav__list');
+navBtn.classList.remove('main-nav__toggle--open');
+navList.classList.remove('main-nav__list--nojs');
 
 // compare slider
 
